@@ -1,830 +1,1258 @@
-```html
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Think Tank Strategy: 24-Month Content, Impact, Media Seeding & Donor Logic</title>
-  <meta name="description" content="A lean, agenda-setting think tank blueprint on Transatlantic/Western defense & security: strategy, 2-year plan, KPIs, media seeding, and donor pitch logic." />
-  <style>
-    :root{
-      --bg:#ffffff;
-      --fg:#0f172a;
-      --muted:#475569;
-      --line:#e2e8f0;
-      --card:#f8fafc;
-      --accent:#0ea5e9;
-      --accent2:#22c55e;
-      --warn:#f97316;
-      --danger:#ef4444;
-      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-      --radius: 16px;
-      --shadow: 0 12px 28px rgba(2,6,23,.08);
-    }
-    html,body{background:var(--bg);color:var(--fg);font-family:var(--sans);margin:0}
-    a{color:var(--accent);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .wrap{max-width:1080px;margin:0 auto;padding:28px 18px 60px}
-    header{padding:18px 0 10px;border-bottom:1px solid var(--line)}
-    .kicker{font-size:13px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
-    h1{margin:10px 0 8px;font-size:34px;line-height:1.1}
-    .subtitle{margin:0 0 14px;color:var(--muted);max-width:75ch}
-    nav{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 18px}
-    nav a{font-size:13px;padding:8px 10px;border:1px solid var(--line);border-radius:999px;background:#fff}
-    nav a:hover{border-color:#cbd5e1}
-    .grid{display:grid;grid-template-columns:1fr;gap:14px}
-    @media(min-width:900px){.grid{grid-template-columns:1fr 1fr}}
-    section{margin-top:22px}
-    h2{font-size:22px;margin:0 0 10px}
-    h3{font-size:17px;margin:18px 0 8px}
-    p{margin:8px 0;color:var(--fg);line-height:1.55}
-    ul{margin:8px 0 8px 18px;color:var(--fg);line-height:1.55}
-    li{margin:6px 0}
-    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px}
-    .pillrow{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 0}
-    .pill{font-size:12px;border:1px solid var(--line);border-radius:999px;padding:6px 10px;background:#fff;color:var(--muted)}
-    .pill.accent{border-color:rgba(14,165,233,.35);color:#0369a1}
-    .pill.good{border-color:rgba(34,197,94,.35);color:#166534}
-    .pill.warn{border-color:rgba(249,115,22,.35);color:#9a3412}
-    .pill.danger{border-color:rgba(239,68,68,.35);color:#991b1b}
-    .two{display:grid;grid-template-columns:1fr;gap:14px}
-    @media(min-width:900px){.two{grid-template-columns:1.2fr .8fr}}
-    .table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
-    .table th,.table td{padding:10px 10px;border-bottom:1px solid var(--line);vertical-align:top}
-    .table th{background:#f1f5f9;text-align:left;font-size:13px;color:#0f172a}
-    .table td{font-size:14px;color:#0f172a}
-    .small{font-size:13px;color:var(--muted)}
-    .callout{border-left:4px solid var(--accent);padding:10px 12px;background:#f0f9ff;border-radius:12px}
-    .callout.warn{border-left-color:var(--warn);background:#fff7ed}
-    .callout.danger{border-left-color:var(--danger);background:#fff1f2}
-    .mono{font-family:var(--mono)}
-    .hr{height:1px;background:var(--line);margin:18px 0}
-    footer{margin-top:34px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}
-    .badge{display:inline-block;font-size:12px;padding:2px 8px;border-radius:999px;background:#e2e8f0;color:#0f172a;margin-left:6px}
-    .cols{display:grid;grid-template-columns:1fr;gap:14px}
-    @media(min-width:900px){.cols{grid-template-columns:1fr 1fr 1fr}}
-    .tight ul{margin-top:6px}
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Think Tank — Internal Strategy</title>
+  <meta name="description" content="Internal strategy document: sovereign defense realism, tech-first power, and transatlantic security framework.">
+  
+  <!-- Production CSS (built from Tailwind) -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 </head>
-<body>
-  <div class="wrap">
-    <header>
-      <div class="kicker">US-based • fully virtual • agenda-setting • 24-month plan</div>
-      <h1>Think Tank Blueprint: Strategy, 2-Year Content & Impact Plan, KPIs, Media Seeding, Donor Logic</h1>
-      <p class="subtitle">
-        A lean, high-friction think tank designed to shift elite discourse on Transatlantic/Western defense and security:
-        sovereign state realism over multilateralism, next-gen tech over legacy industrial replication, explicit focus on threats from China, Russia and Iran,
-        business-like defense leadership, free speech posture, and Israel as a strategic model.
+<body class="min-h-screen">
+  
+  <!-- Mobile Menu Overlay -->
+  <div id="menuOverlay" class="fixed inset-0 bg-black/60 z-40 hidden" onclick="toggleMobileMenu()"></div>
+  
+  <!-- Mobile Menu -->
+  <nav id="mobileMenu" class="mobile-menu fixed top-0 left-0 h-full w-72 bg-navy-900 border-r border-navy-700 z-50 p-6">
+    <div class="flex items-center justify-between mb-8">
+      <span class="font-display font-bold text-xl text-slate-100">Think Tank</span>
+      <button onclick="toggleMobileMenu()" class="p-2 hover:bg-navy-700 rounded-lg transition-colors" aria-label="Close menu">
+        <i data-lucide="x" class="w-5 h-5 text-slate-300"></i>
+      </button>
+    </div>
+    <div class="space-y-1">
+      <a href="#doctrine" onclick="toggleMobileMenu()" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-navy-700 text-slate-300 hover:text-slate-100 transition-colors">
+        <i data-lucide="shield" class="w-4 h-4"></i>
+        <span>Strategic Doctrine</span>
+      </a>
+      <a href="#leadership" onclick="toggleMobileMenu()" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-navy-700 text-slate-300 hover:text-slate-100 transition-colors">
+        <i data-lucide="users" class="w-4 h-4"></i>
+        <span>Leadership</span>
+      </a>
+      <a href="#programs" onclick="toggleMobileMenu()" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-navy-700 text-slate-300 hover:text-slate-100 transition-colors">
+        <i data-lucide="layers" class="w-4 h-4"></i>
+        <span>Research Programs</span>
+      </a>
+      <a href="#roadmap" onclick="toggleMobileMenu()" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-navy-700 text-slate-300 hover:text-slate-100 transition-colors">
+        <i data-lucide="map" class="w-4 h-4"></i>
+        <span>24-Month Roadmap</span>
+      </a>
+      <a href="#operations" onclick="toggleMobileMenu()" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-navy-700 text-slate-300 hover:text-slate-100 transition-colors">
+        <i data-lucide="settings" class="w-4 h-4"></i>
+        <span>Operations</span>
+      </a>
+      <a href="#impact" onclick="toggleMobileMenu()" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-navy-700 text-slate-300 hover:text-slate-100 transition-colors">
+        <i data-lucide="target" class="w-4 h-4"></i>
+        <span>Impact Metrics</span>
+      </a>
+    </div>
+    <div class="absolute bottom-6 left-6 right-6">
+      <div class="text-xs text-slate-400 border-t border-navy-700 pt-4">
+        Internal Document<br>
+        Updated 2026-01-19
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-30 bg-navy-950/95 backdrop-blur-sm border-b border-navy-700">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between h-16">
+        <!-- Hamburger + Title -->
+        <div class="flex items-center gap-4">
+          <button onclick="toggleMobileMenu()" class="p-2 hover:bg-navy-700 rounded-lg transition-colors lg:hidden" aria-label="Open menu">
+            <i data-lucide="menu" class="w-5 h-5 text-slate-300"></i>
+          </button>
+          <div>
+            <h1 class="font-display font-bold text-lg sm:text-xl text-slate-100">Think Tank</h1>
+            <p class="text-xs text-slate-400 hidden sm:block">Sovereign Defense Realism & Tech-First Power</p>
+          </div>
+        </div>
+        
+        <!-- Desktop Nav -->
+        <nav class="hidden lg:flex items-center gap-1">
+          <a href="#doctrine" class="px-3 py-2 text-sm text-slate-300 hover:text-sky-400 transition-colors">Doctrine</a>
+          <a href="#leadership" class="px-3 py-2 text-sm text-slate-300 hover:text-sky-400 transition-colors">Leadership</a>
+          <a href="#programs" class="px-3 py-2 text-sm text-slate-300 hover:text-sky-400 transition-colors">Programs</a>
+          <a href="#roadmap" class="px-3 py-2 text-sm text-slate-300 hover:text-sky-400 transition-colors">Roadmap</a>
+          <a href="#operations" class="px-3 py-2 text-sm text-slate-300 hover:text-sky-400 transition-colors">Operations</a>
+          <a href="#impact" class="px-3 py-2 text-sm text-slate-300 hover:text-sky-400 transition-colors">Impact</a>
+        </nav>
+        
+        <!-- Status Badge -->
+        <div class="hidden sm:flex items-center gap-2 text-xs">
+          <span class="px-2.5 py-1 bg-sky-400/10 text-sky-400 rounded-full border border-sky-400/30">Internal</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="border-b border-navy-700">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-14 lg:py-16">
+      <div class="flex items-center gap-2 text-xs text-slate-400 uppercase tracking-wider mb-4">
+        <i data-lucide="lock" class="w-3.5 h-3.5"></i>
+        <span>Internal Strategy • US-Based • Fully Virtual • High-Friction Agenda Setting</span>
+      </div>
+      <h2 class="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-slate-100 mb-4 leading-tight">
+        Sovereign Defense Realism<br class="hidden sm:block">
+        <span class="text-sky-400">&</span> Tech-First Power
+      </h2>
+      <p class="text-base sm:text-lg text-slate-300 max-w-3xl leading-relaxed">
+        A small, agenda-setting think tank built to shift elite discourse away from multilateral illusions toward sovereign-state defense responsibility, next-generation technology leapfrogging, and execution-first leadership.
       </p>
-      <nav>
-        <a href="#doctrine">Doctrine</a>
-        <a href="#audience">Audience & Geography</a>
-        <a href="#model">Operating Model</a>
-        <a href="#content">Content Doctrine</a>
-        <a href="#plan">24-Month Plan</a>
-        <a href="#media">Media Seeding</a>
-        <a href="#donors">Donor Pitch Logic</a>
-        <a href="#kpis">KPIs</a>
-        <a href="#appendix">Appendices</a>
-      </nav>
-    </header>
+      <div class="flex flex-wrap gap-2 mt-6">
+        <span class="pill pill-warn">Designed to trigger rebuttals</span>
+        <span class="pill">Public output 80%</span>
+        <span class="pill pill-good">State-by-state focus</span>
+        <span class="pill pill-danger">EU-funded consensus avoided</span>
+      </div>
+    </div>
+  </section>
 
-    <section id="doctrine">
-      <h2>1) Strategic Doctrine (Non-Negotiable)</h2>
-      <div class="two">
-        <div class="card">
-          <h3>Core Thesis (One Sentence)</h3>
-          <p>
-            Western security will fail unless European states reclaim sovereign defense responsibility, abandon multilateral illusions,
-            and leapfrog legacy militaries via next-generation technology—taking operational lessons from Israel rather than EU
-            bureaucratic consensus.
+  <!-- Main Content -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
+    
+    <!-- Section 1: Strategic Doctrine -->
+    <section id="doctrine" class="mb-4 sm:mb-6">
+      <div class="section-header open flex items-center justify-between p-3 sm:p-4 rounded-xl" onclick="toggleSection(this)">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-sky-400/10 border border-sky-400/30 flex items-center justify-center flex-shrink-0">
+            <i data-lucide="shield" class="w-4 h-4 sm:w-5 sm:h-5 text-sky-400"></i>
+          </div>
+          <div>
+            <h3 class="font-display font-semibold text-base sm:text-lg text-slate-100">1. Strategic Doctrine</h3>
+            <p class="text-xs sm:text-sm text-slate-400 hidden sm:block">Non-negotiable premises and operating constraints</p>
+          </div>
+        </div>
+        <i data-lucide="chevron-down" class="section-chevron w-5 h-5 text-slate-400 flex-shrink-0"></i>
+      </div>
+      
+      <div class="section-content open">
+        <div class="pt-4 space-y-4">
+          <!-- Core Thesis -->
+          <div class="card p-4 sm:p-6">
+            <h4 class="font-display font-semibold text-sm sm:text-base text-slate-100 mb-3 flex items-center gap-2">
+              <i data-lucide="crosshair" class="w-4 h-4 text-sky-400"></i>
+              Core Thesis
+            </h4>
+            <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
+              Western security will fail unless European states reclaim sovereign defense responsibility, abandon multilateral illusions, and leapfrog legacy militaries via next-generation technology—taking operational lessons from Israel rather than EU bureaucratic consensus.
+            </p>
+          </div>
+          
+          <div class="grid lg:grid-cols-2 gap-4">
+            <!-- Premises -->
+            <div class="card p-4 sm:p-6">
+              <h4 class="font-display font-semibold text-sm sm:text-base text-slate-100 mb-4 flex items-center gap-2">
+                <i data-lucide="list-checks" class="w-4 h-4 text-sky-400"></i>
+                Premises (Explicit)
+              </h4>
+              <ul class="space-y-3 text-sm text-slate-300">
+                <li class="flex gap-3">
+                  <span class="text-sky-400 mt-0.5 flex-shrink-0">•</span>
+                  <span><strong class="text-slate-100">Stop outsourcing EU security to the US via NATO.</strong> NATO cannot remain Europe's substitute for sovereign defense.</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="text-sky-400 mt-0.5 flex-shrink-0">•</span>
+                  <span><strong class="text-slate-100">Sovereign, state-by-state realism.</strong> Outcomes are national; multilateral bodies are transactional venues.</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="text-sky-400 mt-0.5 flex-shrink-0">•</span>
+                  <span><strong class="text-slate-100">Threat triad:</strong> China, Russia, Iran are primary adversaries and must anchor planning and investment.</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="text-sky-400 mt-0.5 flex-shrink-0">•</span>
+                  <span><strong class="text-slate-100">Business-like defense leadership:</strong> maximize core mission; cut virtue signaling and bureaucratic sprawl.</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="text-sky-400 mt-0.5 flex-shrink-0">•</span>
+                  <span><strong class="text-slate-100">Israel as competence model</strong> for sovereignty and adaptation; treat operational learning as exportable.</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="text-sky-400 mt-0.5 flex-shrink-0">•</span>
+                  <span><strong class="text-slate-100">Tech leapfrogging:</strong> win through AI/data, autonomy, cyber, space, and fielding speed—not copying legacy systems.</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="text-sky-400 mt-0.5 flex-shrink-0">•</span>
+                  <span><strong class="text-slate-100">UN/EU are not security providers</strong> for the US or sovereign European states in practice.</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="text-sky-400 mt-0.5 flex-shrink-0">•</span>
+                  <span><strong class="text-slate-100">Free-speech posture:</strong> censorship norms are strategic liabilities; debate is a capability.</span>
+                </li>
+              </ul>
+            </div>
+            
+            <!-- Operating Constraints -->
+            <div class="card p-4 sm:p-6">
+              <h4 class="font-display font-semibold text-sm sm:text-base text-slate-100 mb-4 flex items-center gap-2">
+                <i data-lucide="sliders" class="w-4 h-4 text-sky-400"></i>
+                Operating Constraints
+              </h4>
+              <div class="overflow-x-auto -mx-4 sm:mx-0 px-4 sm:px-0">
+                <table class="data-table text-sm">
+                  <tbody>
+                    <tr>
+                      <th class="whitespace-nowrap">Legal/Footprint</th>
+                      <td>US-based • fully virtual</td>
+                    </tr>
+                    <tr>
+                      <th class="whitespace-nowrap">Risk Appetite</th>
+                      <td>High (reputational exclusion accepted)</td>
+                    </tr>
+                    <tr>
+                      <th class="whitespace-nowrap">Primary Audiences</th>
+                      <td>Dual-use founders/investors • journalists/agenda-setters • intelligence community</td>
+                    </tr>
+                    <tr>
+                      <th class="whitespace-nowrap">Geographic Weight</th>
+                      <td>US 30% • Europe 70% (Germany, Poland, Italy, Hungary, Denmark, Sweden, Switzerland)</td>
+                    </tr>
+                    <tr>
+                      <th class="whitespace-nowrap">Products</th>
+                      <td>2–4 page memos • closed-door briefings</td>
+                    </tr>
+                    <tr>
+                      <th class="whitespace-nowrap">Budget</th>
+                      <td>$150k/year (Western funding only)</td>
+                    </tr>
+                    <tr>
+                      <th class="whitespace-nowrap">Success</th>
+                      <td>Funding growth + visible institutional attacks + elite citations</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="callout-warn mt-4">
+                <strong class="text-amber-200">Impact rule:</strong> <span class="text-slate-300">if EU bodies/NGOs ignore you, you failed. If they attack you, you are landing.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Leadership -->
+    <section id="leadership" class="mb-4 sm:mb-6">
+      <div class="section-header flex items-center justify-between p-3 sm:p-4 rounded-xl" onclick="toggleSection(this)">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-emerald-400/10 border border-emerald-400/30 flex items-center justify-center flex-shrink-0">
+            <i data-lucide="users" class="w-4 h-4 sm:w-5 sm:h-5 text-emerald-400"></i>
+          </div>
+          <div>
+            <h3 class="font-display font-semibold text-base sm:text-lg text-slate-100">2. Leadership & Roles</h3>
+            <p class="text-xs sm:text-sm text-slate-400 hidden sm:block">People, responsibilities, and operating rhythm</p>
+          </div>
+        </div>
+        <i data-lucide="chevron-down" class="section-chevron w-5 h-5 text-slate-400 flex-shrink-0"></i>
+      </div>
+      
+      <div class="section-content">
+        <div class="pt-4 space-y-4">
+          <div class="grid lg:grid-cols-2 gap-4">
+            <!-- Chair/Founder -->
+            <div class="card p-4 sm:p-6">
+              <div class="flex items-start gap-3 sm:gap-4 mb-4">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-navy-700 border border-navy-600 flex items-center justify-center flex-shrink-0">
+                  <span class="font-display font-bold text-base sm:text-lg text-slate-100">DA</span>
+                </div>
+                <div>
+                  <h4 class="font-display font-semibold text-base sm:text-lg text-slate-100">D.A.</h4>
+                  <p class="text-sm text-sky-400">Chair / Founder</p>
+                </div>
+              </div>
+              <p class="text-sm text-slate-300 mb-4">Public face, doctrine owner, and escalation/response decision-maker.</p>
+              <ul class="space-y-2 text-slate-300 text-sm">
+                <li class="flex gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5"></i>
+                  <span>Sets strategic red lines and enemy model (GMF, CSIS, RAND Europe)</span>
+                </li>
+                <li class="flex gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5"></i>
+                  <span>Approves quarterly campaigns and response posture</span>
+                </li>
+                <li class="flex gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5"></i>
+                  <span>Protects Dr. T.L.'s time from fundraising calls</span>
+                </li>
+              </ul>
+              <div class="callout-danger mt-4">
+                <strong class="text-red-200">Anti-goal:</strong> <span class="text-slate-300">becoming another EU-funded consensus factory.</span>
+              </div>
+              
+              <h5 class="font-display font-medium text-sm text-slate-100 mt-6 mb-3">Responsibilities</h5>
+              <ul class="space-y-2 text-slate-300 text-sm">
+                <li class="flex gap-2">
+                  <span class="text-sky-400">•</span>
+                  <span><strong class="text-slate-100">Doctrine ownership:</strong> defines the lines you will cross and the fights you will pick.</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-sky-400">•</span>
+                  <span><strong class="text-slate-100">External posture:</strong> public positioning, escalation, and crisis statements.</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-sky-400">•</span>
+                  <span><strong class="text-slate-100">Conversion moments:</strong> donor renewals and high-level introductions.</span>
+                </li>
+              </ul>
+            </div>
+            
+            <!-- Lead Expert -->
+            <div class="card p-4 sm:p-6 border-sky-400/30">
+              <div class="flex items-start gap-3 sm:gap-4 mb-4">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-sky-400/20 border border-sky-400/40 flex items-center justify-center flex-shrink-0">
+                  <span class="font-display font-bold text-base sm:text-lg text-sky-400">TL</span>
+                </div>
+                <div>
+                  <h4 class="font-display font-semibold text-base sm:text-lg text-slate-100">Dr. T.L., Ph.D.</h4>
+                  <p class="text-sm text-sky-400">Lead Expert + Interim Editor</p>
+                </div>
+              </div>
+              <p class="text-sm text-slate-300 mb-4">Narrative strategist and default briefer with editorial kill authority.</p>
+              
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="pill pill-good">Default briefer</span>
+                <span class="pill pill-warn">Narrative strategist</span>
+                <span class="pill pill-danger">Kill authority</span>
+                <span class="pill">5–8h/week</span>
+              </div>
+              
+              <div class="overflow-x-auto -mx-4 sm:mx-0 px-4 sm:px-0">
+                <table class="data-table text-sm mb-4">
+                  <tbody>
+                    <tr>
+                      <th class="whitespace-nowrap">Experience</th>
+                      <td>15 years in technology-security research & consultancy</td>
+                    </tr>
+                    <tr>
+                      <th class="whitespace-nowrap">Education</th>
+                      <td>PhD, International Relations (Defense & Information Age)</td>
+                    </tr>
+                    <tr>
+                      <th class="whitespace-nowrap">Technical Domains</th>
+                      <td>AI, UAVs, Cyber Operations, Emerging Technologies</td>
+                    </tr>
+                    <tr>
+                      <th class="whitespace-nowrap">Regional Expertise</th>
+                      <td>Israeli Security Affairs, Russian Strategic Culture</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              
+              <h5 class="font-display font-medium text-sm text-slate-100 mb-3">Responsibilities</h5>
+              <ul class="space-y-2 text-slate-300 text-sm">
+                <li class="flex gap-2">
+                  <span class="text-sky-400">•</span>
+                  <span><strong class="text-slate-100">Narrative strategy:</strong> chooses campaigns and packaging for uptake.</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-sky-400">•</span>
+                  <span><strong class="text-slate-100">Editorial authority:</strong> sets evidence bar; can kill weak memos.</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-sky-400">•</span>
+                  <span><strong class="text-slate-100">Default briefer:</strong> investors, intel, journalists (background).</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-sky-400">•</span>
+                  <span><strong class="text-slate-100">Exclusion:</strong> no fundraising calls.</span>
+                </li>
+              </ul>
+              
+              <div class="callout-warn mt-4">
+                <strong class="text-amber-200">Time protection rule:</strong> <span class="text-slate-300">no meetings without a memo artifact.</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Executive Summary -->
+          <div class="card p-4 sm:p-6">
+            <h4 class="font-display font-semibold text-sm sm:text-base text-slate-100 mb-3 flex items-center gap-2">
+              <i data-lucide="file-text" class="w-4 h-4 text-sky-400"></i>
+              Executive Summary (Dr. T.L., Ph.D.)
+            </h4>
+            <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
+              Dr. T.L., Ph.D. is a distinguished scholar and practitioner with 15 years of expertise at the intersection of technology, security, and geopolitics. His doctoral research on the systemic failures of Western defense establishments to adapt to information-age threats provides precisely the diagnostic foundation your institution requires. His dual expertise in Israeli security affairs and Russian strategic culture, combined with deep fluency in emerging technologies including AI, UAVs, and cyber operations, positions him uniquely to advance your mission of architecting a new transatlantic security framework.
+            </p>
+          </div>
+          
+          <!-- Expertise-to-Campaign Alignment -->
+          <div class="card p-4 sm:p-6">
+            <h4 class="font-display font-semibold text-sm sm:text-base text-slate-100 mb-4 flex items-center gap-2">
+              <i data-lucide="git-merge" class="w-4 h-4 text-sky-400"></i>
+              Dr. T.L.'s Expertise Mapped to 24-Month Campaigns
+            </h4>
+            <div class="overflow-x-auto -mx-4 sm:mx-0 px-4 sm:px-0">
+              <table class="data-table text-sm">
+                <thead>
+                  <tr>
+                    <th>Expertise Area</th>
+                    <th>Campaign Application</th>
+                    <th>Quarter</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="font-medium text-slate-100">Russian Strategic Culture<br><span class="text-slate-400 text-xs">(Native Russian speaker)</span></td>
+                    <td>Threat triad clarity — direct-source analysis of Russian doctrine</td>
+                    <td><span class="program-tag bg-sky-400/20 text-sky-300">Q2</span></td>
+                  </tr>
+                  <tr>
+                    <td class="font-medium text-slate-100">Israeli Security Affairs<br><span class="text-slate-400 text-xs">(Native Hebrew speaker)</span></td>
+                    <td>Israel as model — operational learning, innovation ecosystem access</td>
+                    <td><span class="program-tag bg-sky-400/20 text-sky-300">Q3</span></td>
+                  </tr>
+                  <tr>
+                    <td class="font-medium text-slate-100">AI, UAVs, Cyber, Emerging Tech</td>
+                    <td>Tech leapfrog doctrine — integration mechanisms, fielding speed</td>
+                    <td><span class="program-tag bg-sky-400/20 text-sky-300">Q4</span> <span class="program-tag bg-emerald-400/20 text-emerald-300">Q5</span></td>
+                  </tr>
+                  <tr>
+                    <td class="font-medium text-slate-100">Taiwan & Singapore Experience</td>
+                    <td>Small powers playbook — asymmetric defense for European states</td>
+                    <td><span class="program-tag bg-emerald-400/20 text-emerald-300">Q6</span> <span class="program-tag bg-emerald-400/20 text-emerald-300">Q7</span></td>
+                  </tr>
+                  <tr>
+                    <td class="font-medium text-slate-100">Defense-Technology Integration</td>
+                    <td>Sovereign technology prowess — state-specific capability frameworks</td>
+                    <td><span class="program-tag bg-sky-400/20 text-sky-300">Q1</span> <span class="program-tag bg-emerald-400/20 text-emerald-300">Q5-Q8</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          
+          <!-- Operating Rhythm -->
+          <div class="card p-4 sm:p-6">
+            <h4 class="font-display font-semibold text-sm sm:text-base text-slate-100 mb-4 flex items-center gap-2">
+              <i data-lucide="clock" class="w-4 h-4 text-sky-400"></i>
+              Operating Rhythm (Built for 5–8h/week Dr. T.L. availability)
+            </h4>
+            <div class="overflow-x-auto -mx-4 sm:mx-0 px-4 sm:px-0">
+              <table class="data-table text-sm">
+                <thead>
+                  <tr>
+                    <th>Weekly Block</th>
+                    <th>Owner</th>
+                    <th>Purpose</th>
+                    <th>Deliverable</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>60–90 min</td>
+                    <td>Dr. T.L.</td>
+                    <td>Thesis + claim selection + kill/greenlight</td>
+                    <td>1-page memo brief</td>
+                  </tr>
+                  <tr>
+                    <td>60–120 min</td>
+                    <td>Fellows</td>
+                    <td>Evidence build + citations + draft</td>
+                    <td>Draft v1</td>
+                  </tr>
+                  <tr>
+                    <td>60–90 min</td>
+                    <td>Dr. T.L.</td>
+                    <td>Edit to 2–4 pages; add heresy line + actions</td>
+                    <td>Publish-ready memo</td>
+                  </tr>
+                  <tr>
+                    <td>30–45 min</td>
+                    <td>Dr. T.L.</td>
+                    <td>Approve quote bank + embargo one-pager</td>
+                    <td>Seeding pack</td>
+                  </tr>
+                  <tr>
+                    <td>60 min</td>
+                    <td>Dr. T.L.</td>
+                    <td>Background calls / briefing</td>
+                    <td>Briefing notes</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          
+          <!-- How TL Is Used -->
+          <div class="card p-4 sm:p-6">
+            <h4 class="font-display font-semibold text-sm sm:text-base text-slate-100 mb-4 flex items-center gap-2">
+              <i data-lucide="zap" class="w-4 h-4 text-sky-400"></i>
+              How Dr. T.L. Is Used (Leverage)
+            </h4>
+            <ul class="space-y-2 text-sm text-slate-300">
+              <li class="flex gap-2">
+                <i data-lucide="arrow-right" class="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5"></i>
+                <span><strong class="text-slate-100">Narrative strategist:</strong> campaign arcs and memo theses</span>
+              </li>
+              <li class="flex gap-2">
+                <i data-lucide="arrow-right" class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5"></i>
+                <span><strong class="text-slate-100">Default briefer:</strong> investors / intel / journalist background</span>
+              </li>
+              <li class="flex gap-2">
+                <i data-lucide="arrow-right" class="w-4 h-4 text-red-400 flex-shrink-0 mt-0.5"></i>
+                <span><strong class="text-slate-100">Editorial kill authority:</strong> enforce short, quotable output</span>
+              </li>
+              <li class="flex gap-2">
+                <i data-lucide="arrow-right" class="w-4 h-4 text-sky-400 flex-shrink-0 mt-0.5"></i>
+                <span><strong class="text-slate-100">Protected time:</strong> no fundraising calls; no meetings without memo artifacts</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Research Programs -->
+    <section id="programs" class="mb-4 sm:mb-6">
+      <div class="section-header flex items-center justify-between p-3 sm:p-4 rounded-xl" onclick="toggleSection(this)">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-amber-400/10 border border-amber-400/30 flex items-center justify-center flex-shrink-0">
+            <i data-lucide="layers" class="w-4 h-4 sm:w-5 sm:h-5 text-amber-400"></i>
+          </div>
+          <div>
+            <h3 class="font-display font-semibold text-base sm:text-lg text-slate-100">3. Six Research Programs</h3>
+            <p class="text-xs sm:text-sm text-slate-400 hidden sm:block">Aligned to Dr. T.L.'s expertise and 24-month campaigns</p>
+          </div>
+        </div>
+        <i data-lucide="chevron-down" class="section-chevron w-5 h-5 text-slate-400 flex-shrink-0"></i>
+      </div>
+      
+      <div class="section-content">
+        <div class="pt-4 space-y-4">
+          <div class="card p-4 sm:p-6">
+            <p class="text-sm text-slate-400">
+              Each program is structured to produce repeatable memo series, generate controversy where needed, and translate into sovereign state actions and investor/intel briefings. <strong class="text-slate-300">Campaign tags show when each program activates in the 24-month roadmap.</strong>
+            </p>
+          </div>
+          
+          <!-- Program 1 -->
+          <div class="card p-4 sm:p-6">
+            <div class="flex flex-col sm:flex-row sm:items-start gap-3 sm:gap-4">
+              <div class="flex items-center gap-3 sm:block">
+                <div class="w-8 h-8 rounded-lg bg-red-400/10 border border-red-400/30 flex items-center justify-center flex-shrink-0">
+                  <span class="font-display font-bold text-sm text-red-400">1</span>
+                </div>
+                <div class="flex gap-1.5 sm:mt-2">
+                  <span class="program-tag bg-sky-400/20 text-sky-300 text-xs">Q2</span>
+                </div>
+              </div>
+              <div class="flex-1">
+                <h4 class="font-display font-semibold text-sm sm:text-base text-slate-100 mb-2">Correcting Russian Strategic Bias</h4>
+                <p class="text-xs text-slate-400 mb-3">Dr. T.L. expertise: <span class="text-emerald-300">Native Russian speaker • Russian Strategic Culture</span></p>
+                <p class="text-sm text-slate-300 leading-relaxed mb-4">
+                  As a native Russian speaker, Dr. T.L. can provide direct-source analysis that circumvents the decades-long bias in Western defense thought derived from exclusive reliance on English-language sources. Most professional pundits lack primary-source access to Russian strategic discourse, doctrinal evolution, and elite debates. Dr. T.L. can deliver first-hand evidence of the real Russian situation, enabling your institution to challenge and correct the most critical analytical blindspots that have hampered Western response to Russian revisionism.
+                </p>
+                <div class="callout">
+                  <p class="text-sm text-slate-300">
+                    <strong class="text-sky-400">Operational output:</strong> publish a recurring "Bias Corrections" series that flags the specific analytical shortcuts—terminology, historical analogies, and incentive misreads—that repeatedly distort Western coverage of Moscow. Each memo ends with concrete indicators to watch (force posture, mobilization signals, industrial constraints, escalation thresholds) and a short list of actionable counter-moves for Germany, Poland, and Sweden.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Program 2 -->
+          <div class="card p-4 sm:p-6">
+            <div class="flex flex-col sm:flex-row sm:items-start gap-3 sm:gap-4">
+              <div class="flex items-center gap-3 sm:block">
+                <div class="w-8 h-8 rounded-lg bg-sky-400/10 border border-sky-400/30 flex items-center justify-center flex-shrink-0">
+                  <span class="font-display font-bold text-sm text-sky-400">2</span>
+                </div>
+                <div class="flex gap-1.5 sm:mt-2">
+                  <span class="program-tag bg-sky-400/20 text-sky-300 text-xs">Q3</span>
+                </div>
+              </div>
+              <div class="flex-1">
+                <h4 class="font-display font-semibold text-sm sm:text-base text-slate-100 mb-2">Israeli Defense Innovation as European Early Warning</h4>
+                <p class="text-xs text-slate-400 mb-3">Dr. T.L. expertise: <span class="text-emerald-300">Native Hebrew speaker • Israeli Security Affairs • Innovation Hub Access</span></p>
+                <p class="text-sm text-slate-300 leading-relaxed mb-4">
+                  The future of Western defense has long been shaped in the Arab-Israeli theater of war. As a native Hebrew speaker working in the hub of Israel's innovation system, Dr. T.L. has direct access to and understanding of the operational and technological challenges that will arrive in European capitals within the next strategic cycle. This positioning provides your institution with a critical early-warning capacity for threat adaptation and capability requirements.
+                </p>
+                <div class="callout">
+                  <p class="text-sm text-slate-300">
+                    <strong class="text-sky-400">Operational output:</strong> maintain an "Israel-as-sensor" tracker—what Israel is adapting to first (UAV swarms, counter-UAS, air defense saturation, tunnel warfare, cyber-enabled targeting) and what that implies for Europe within 12–24 months. This becomes a high-signal feed for journalists and investors, translating battlefield learning into procurement and doctrine priorities for sovereign European states.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Program 3 -->
+          <div class="card p-4 sm:p-6">
+            <div class="flex flex-col sm:flex-row sm:items-start gap-3 sm:gap-4">
+              <div class="flex items-center gap-3 sm:block">
+                <div class="w-8 h-8 rounded-lg bg-emerald-400/10 border border-emerald-400/30 flex items-center justify-center flex-shrink-0">
+                  <span class="font-display font-bold text-sm text-emerald-400">3</span>
+                </div>
+                <div class="flex gap-1.5 sm:mt-2 flex-wrap">
+                  <span class="program-tag bg-sky-400/20 text-sky-300 text-xs">Q1</span>
+                  <span class="program-tag bg-sky-400/20 text-sky-300 text-xs">Q4</span>
+                  <span class="program-tag bg-emerald-400/20 text-emerald-300 text-xs">Q5</span>
+                </div>
+              </div>
+              <div class="flex-1">
+                <h4 class="font-display font-semibold text-sm sm:text-base text-slate-100 mb-2">Technology-Defense Integration Mechanisms</h4>
+                <p class="text-xs text-slate-400 mb-3">Dr. T.L. expertise: <span class="text-emerald-300">AI, UAVs, Cyber Operations • Defense-Technology Integration • PhD on Information-Age Defense</span></p>
+                <p class="text-sm text-slate-300 leading-relaxed mb-4">
+                  Israel and the United States have pursued technology-centric defense strategies since the 1970s. In the current conflict, Israel has achieved strategic victories against Iran and its proxies through superior integration of emerging technologies across operational domains. Dr. T.L. can analyze not merely the systems themselves but the structural processes and institutional adaptations that enable rapid technology absorption—critical knowledge for European partners seeking similar transformation. These are not recipes for replication but frameworks for understanding adaptive capacity.
+                </p>
+                <div class="callout">
+                  <p class="text-sm text-slate-300">
+                    <strong class="text-sky-400">Operational output:</strong> define the minimum institutional mechanisms that allow tech to become warfighting advantage—rapid procurement paths, operator-led iteration loops, test ranges, data governance, and mission ownership. The think tank's role is to publish the small set of reforms that actually change fielding speed, and to name the bureaucratic chokepoints that keep Europe stuck in legacy acquisition cycles.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Program 4 -->
+          <div class="card p-4 sm:p-6">
+            <div class="flex flex-col sm:flex-row sm:items-start gap-3 sm:gap-4">
+              <div class="flex items-center gap-3 sm:block">
+                <div class="w-8 h-8 rounded-lg bg-amber-400/10 border border-amber-400/30 flex items-center justify-center flex-shrink-0">
+                  <span class="font-display font-bold text-sm text-amber-400">4</span>
+                </div>
+                <div class="flex gap-1.5 sm:mt-2">
+                  <span class="program-tag bg-sky-400/20 text-sky-300 text-xs">Q3</span>
+                </div>
+              </div>
+              <div class="flex-1">
+                <h4 class="font-display font-semibold text-sm sm:text-base text-slate-100 mb-2">Israeli R&D Ecosystem Access for Western Leaders</h4>
+                <p class="text-xs text-slate-400 mb-3">Dr. T.L. expertise: <span class="text-emerald-300">Native Hebrew speaker • Embedded in Israel's Innovation Hub • Dual-Use Tech Fluency</span></p>
+                <p class="text-sm text-slate-300 leading-relaxed mb-4">
+                  Israel has become a global powerhouse of advanced research and development in software, cybersecurity, artificial intelligence, and sovereign cloud infrastructure. Its scale and density are second only to Silicon Valley. As a native Hebrew speaker embedded in Israel's innovation hub, Dr. T.L. provides your institution with direct access to this ecosystem, enabling Western and European business and political leaders to understand capabilities, partnerships, and strategic opportunities that remain opaque to non-Hebrew-speaking analysts.
+                </p>
+                <div class="callout">
+                  <p class="text-sm text-slate-300">
+                    <strong class="text-sky-400">Operational output:</strong> curate a closed briefing pipeline that introduces Western founders and investors to the real Israeli dual-use ecosystem—labs, accelerators, defense primes, and operational units—without the usual PR layer. The deliverable is not "Israel tourism," but an investable map of capabilities, partners, and constraints, plus a playbook for replicating the relevant mechanisms in European states.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Program 5 -->
+          <div class="card p-4 sm:p-6">
+            <div class="flex flex-col sm:flex-row sm:items-start gap-3 sm:gap-4">
+              <div class="flex items-center gap-3 sm:block">
+                <div class="w-8 h-8 rounded-lg bg-violet-400/10 border border-violet-400/30 flex items-center justify-center flex-shrink-0">
+                  <span class="font-display font-bold text-sm text-violet-400">5</span>
+                </div>
+                <div class="flex gap-1.5 sm:mt-2 flex-wrap">
+                  <span class="program-tag bg-emerald-400/20 text-emerald-300 text-xs">Q6</span>
+                  <span class="program-tag bg-emerald-400/20 text-emerald-300 text-xs">Q7</span>
+                </div>
+              </div>
+              <div class="flex-1">
+                <h4 class="font-display font-semibold text-sm sm:text-base text-slate-100 mb-2">Small Powers Defense Strategy</h4>
+                <p class="text-xs text-slate-400 mb-3">Dr. T.L. expertise: <span class="text-emerald-300">Extensive Taiwan & Singapore Experience • Asymmetric Defense Models</span></p>
+                <p class="text-sm text-slate-300 leading-relaxed mb-4">
+                  With extensive experience in Taiwan and Singapore, Dr. T.L. brings expertise in the defense strategies of small powers facing asymmetric threats from larger adversaries. As European states confront the reality of potential conflict with peer or near-peer powers, the strategic adaptations developed by states like Taiwan and Singapore—maximizing technological advantage, cultivating reserve capacity, and maintaining alliance credibility—offer critical lessons. Dr. T.L. can translate these models for European application.
+                </p>
+                <div class="callout">
+                  <p class="text-sm text-slate-300">
+                    <strong class="text-sky-400">Operational output:</strong> publish a "Small Powers Playbook" that extracts what Taiwan and Singapore do differently—reserve systems, civil-military integration, supply-chain resilience, counter-intelligence posture, and procurement realism. The intent is to offer European states a credible alternative to EU-level abstraction: sovereign defense models that scale without empire-sized budgets.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Program 6 -->
+          <div class="card p-4 sm:p-6">
+            <div class="flex flex-col sm:flex-row sm:items-start gap-3 sm:gap-4">
+              <div class="flex items-center gap-3 sm:block">
+                <div class="w-8 h-8 rounded-lg bg-pink-400/10 border border-pink-400/30 flex items-center justify-center flex-shrink-0">
+                  <span class="font-display font-bold text-sm text-pink-400">6</span>
+                </div>
+                <div class="flex gap-1.5 sm:mt-2 flex-wrap">
+                  <span class="program-tag bg-sky-400/20 text-sky-300 text-xs">Q1</span>
+                  <span class="program-tag bg-sky-400/20 text-sky-300 text-xs">Q2</span>
+                  <span class="program-tag bg-sky-400/20 text-sky-300 text-xs">Q4</span>
+                  <span class="program-tag bg-emerald-400/20 text-emerald-300 text-xs">Q5</span>
+                  <span class="program-tag bg-emerald-400/20 text-emerald-300 text-xs">Q6</span>
+                </div>
+              </div>
+              <div class="flex-1">
+                <h4 class="font-display font-semibold text-sm sm:text-base text-slate-100 mb-2">Designing Sovereign Technology Prowess in European States</h4>
+                <p class="text-xs text-slate-400 mb-3">Dr. T.L. expertise: <span class="text-emerald-300">Tech Business & Architecture • Israel/Singapore Sovereign Tech Models • Political Science + Technology Integration</span></p>
+                <p class="text-sm text-slate-300 leading-relaxed mb-4">
+                  In an increasingly bipolar US-China technology landscape, European states face the imperative of developing sovereign capabilities across critical technology domains to preserve strategic autonomy. Dr. T.L. combines vast breadth in modern technology business and technical architecture with direct experience in how Israel and Singapore have built sovereign technology ecosystems despite resource constraints and geopolitical pressure. His integration of top-tier political science and international relations knowledge with deep technology fluency enables him to design actionable frameworks for European capitals seeking to build indigenous capacity in semiconductors, AI, cybersecurity, and cloud infrastructure. This is not about autarky but about strategic resilience in a world where technology access increasingly functions as geopolitical leverage.
+                </p>
+                <div class="callout">
+                  <p class="text-sm text-slate-300">
+                    <strong class="text-sky-400">Operational output:</strong> frame technology access as geopolitics—compute, chips, satellite services, cyber tooling, and AI models are leverage. Produce state-specific strategies for building sovereign capability through alliances and selective specialization, not autarky. Each memo should specify which capabilities are feasible domestically, which must be allied, and where Europe should leapfrog rather than imitate.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: 24-Month Roadmap -->
+    <section id="roadmap" class="mb-4 sm:mb-6">
+      <div class="section-header flex items-center justify-between p-3 sm:p-4 rounded-xl" onclick="toggleSection(this)">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-violet-400/10 border border-violet-400/30 flex items-center justify-center flex-shrink-0">
+            <i data-lucide="map" class="w-4 h-4 sm:w-5 sm:h-5 text-violet-400"></i>
+          </div>
+          <div>
+            <h3 class="font-display font-semibold text-base sm:text-lg text-slate-100">4. 24-Month Roadmap</h3>
+            <p class="text-xs sm:text-sm text-slate-400 hidden sm:block">Adjusted to maximize Dr. T.L. leverage</p>
+          </div>
+        </div>
+        <i data-lucide="chevron-down" class="section-chevron w-5 h-5 text-slate-400 flex-shrink-0"></i>
+      </div>
+      
+      <div class="section-content">
+        <div class="pt-4 space-y-4">
+          <!-- Cadence -->
+          <div class="card p-4 sm:p-6">
+            <h4 class="font-display font-semibold text-sm sm:text-base text-slate-100 mb-4 flex items-center gap-2">
+              <i data-lucide="repeat" class="w-4 h-4 text-sky-400"></i>
+              Cadence
+            </h4>
+            <ul class="space-y-2 text-sm text-slate-300">
+              <li class="flex gap-2">
+                <i data-lucide="file-text" class="w-4 h-4 text-sky-400 flex-shrink-0 mt-0.5"></i>
+                <span><strong class="text-slate-100">Memos:</strong> 2/month (Dr. T.L. narrative lead, fellow drafting support)</span>
+              </li>
+              <li class="flex gap-2">
+                <i data-lucide="users" class="w-4 h-4 text-sky-400 flex-shrink-0 mt-0.5"></i>
+                <span><strong class="text-slate-100">Closed briefings:</strong> 1/month Year 1; 2/month Year 2 (Dr. T.L. default briefer)</span>
+              </li>
+              <li class="flex gap-2">
+                <i data-lucide="swords" class="w-4 h-4 text-sky-400 flex-shrink-0 mt-0.5"></i>
+                <span><strong class="text-slate-100">Attack cycle:</strong> 1–2 correction memos per quarter</span>
+              </li>
+            </ul>
+            <div class="callout mt-4">
+              <strong class="text-sky-400">Rule:</strong> <span class="text-slate-300">every briefing is memo-led. Briefings are conversion moments and distribution accelerators.</span>
+            </div>
+          </div>
+          
+          <div class="grid lg:grid-cols-2 gap-4">
+            <!-- Year 1 -->
+            <div class="card p-4 sm:p-6">
+              <h4 class="font-display font-semibold text-sm sm:text-base text-slate-100 mb-4 flex items-center gap-2">
+                <i data-lucide="zap" class="w-4 h-4 text-amber-400"></i>
+                Year 1: Shock & Position-Locking
+              </h4>
+              <div class="overflow-x-auto -mx-4 sm:mx-0 px-4 sm:px-0">
+                <table class="data-table text-xs sm:text-sm">
+                  <thead>
+                    <tr>
+                      <th>Qtr</th>
+                      <th>Campaign</th>
+                      <th>Programs</th>
+                      <th>Dr. T.L. Expertise Applied</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="font-medium text-sky-400 whitespace-nowrap">Q1</td>
+                      <td>NATO dependency & EU incapacity</td>
+                      <td><span class="text-emerald-300">6</span> + <span class="text-emerald-300">3</span></td>
+                      <td class="text-slate-400">Tech integration + Sovereign tech frameworks</td>
+                    </tr>
+                    <tr>
+                      <td class="font-medium text-sky-400 whitespace-nowrap">Q2</td>
+                      <td>Threat triad clarity (China/Russia/Iran)</td>
+                      <td><span class="text-red-300">1</span> + <span class="text-emerald-300">6</span></td>
+                      <td class="text-slate-400">Russian strategic culture (native speaker)</td>
+                    </tr>
+                    <tr>
+                      <td class="font-medium text-sky-400 whitespace-nowrap">Q3</td>
+                      <td>Israel as model: adaptation + competence</td>
+                      <td><span class="text-sky-300">2</span> + <span class="text-amber-300">4</span></td>
+                      <td class="text-slate-400">Israeli security + R&D ecosystem access</td>
+                    </tr>
+                    <tr>
+                      <td class="font-medium text-sky-400 whitespace-nowrap">Q4</td>
+                      <td>Tech leapfrog doctrine (AI/UAV/cyber/space)</td>
+                      <td><span class="text-emerald-300">3</span> + <span class="text-emerald-300">6</span></td>
+                      <td class="text-slate-400">AI, UAVs, Cyber, Emerging tech</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            
+            <!-- Year 2 -->
+            <div class="card p-4 sm:p-6">
+              <h4 class="font-display font-semibold text-sm sm:text-base text-slate-100 mb-4 flex items-center gap-2">
+                <i data-lucide="anchor" class="w-4 h-4 text-emerald-400"></i>
+                Year 2: Consolidation & Brokerage
+              </h4>
+              <div class="overflow-x-auto -mx-4 sm:mx-0 px-4 sm:px-0">
+                <table class="data-table text-xs sm:text-sm">
+                  <thead>
+                    <tr>
+                      <th>Qtr</th>
+                      <th>Campaign</th>
+                      <th>Programs</th>
+                      <th>Dr. T.L. Expertise Applied</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="font-medium text-emerald-400 whitespace-nowrap">Q5</td>
+                      <td>Procurement realism: buy vs build vs ally</td>
+                      <td><span class="text-emerald-300">3</span> + <span class="text-emerald-300">6</span></td>
+                      <td class="text-slate-400">Defense-tech integration mechanisms</td>
+                    </tr>
+                    <tr>
+                      <td class="font-medium text-emerald-400 whitespace-nowrap">Q6</td>
+                      <td>State scorecards (lightweight)</td>
+                      <td><span class="text-violet-300">5</span> + <span class="text-emerald-300">6</span></td>
+                      <td class="text-slate-400">Taiwan/Singapore models + tech prowess</td>
+                    </tr>
+                    <tr>
+                      <td class="font-medium text-emerald-400 whitespace-nowrap">Q7</td>
+                      <td>Small powers playbook → Europe</td>
+                      <td><span class="text-violet-300">5</span></td>
+                      <td class="text-slate-400">Asymmetric defense translation</td>
+                    </tr>
+                    <tr>
+                      <td class="font-medium text-emerald-400 whitespace-nowrap">Q8</td>
+                      <td>Forecast + red-team rebuttal cycle</td>
+                      <td><span class="text-slate-300">All</span></td>
+                      <td class="text-slate-400">Full expertise synthesis</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          
+          <div class="callout-warn">
+            <strong class="text-amber-200">Design:</strong> <span class="text-slate-300">fewer topics, more repeat engagements. Dr. T.L. stays the narrative engine; fellows scale production.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Operations -->
+    <section id="operations" class="mb-4 sm:mb-6">
+      <div class="section-header flex items-center justify-between p-3 sm:p-4 rounded-xl" onclick="toggleSection(this)">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-pink-400/10 border border-pink-400/30 flex items-center justify-center flex-shrink-0">
+            <i data-lucide="settings" class="w-4 h-4 sm:w-5 sm:h-5 text-pink-400"></i>
+          </div>
+          <div>
+            <h3 class="font-display font-semibold text-base sm:text-lg text-slate-100">5. Operations</h3>
+            <p class="text-xs sm:text-sm text-slate-400 hidden sm:block">Media seeding, donor logic, and contribution tiers</p>
+          </div>
+        </div>
+        <i data-lucide="chevron-down" class="section-chevron w-5 h-5 text-slate-400 flex-shrink-0"></i>
+      </div>
+      
+      <div class="section-content">
+        <div class="pt-4 space-y-4">
+          <!-- Media Seeding -->
+          <div class="card p-4 sm:p-6">
+            <h4 class="font-display font-semibold text-sm sm:text-base text-slate-100 mb-4 flex items-center gap-2">
+              <i data-lucide="megaphone" class="w-4 h-4 text-sky-400"></i>
+              Media Seeding Workflow
+            </h4>
+            <div class="overflow-x-auto -mx-4 sm:mx-0 px-4 sm:px-0">
+              <table class="data-table text-xs sm:text-sm">
+                <thead>
+                  <tr>
+                    <th>Phase</th>
+                    <th>Timing</th>
+                    <th>Owner</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="font-medium whitespace-nowrap">Pre-brief</td>
+                    <td>T-72 to T-24</td>
+                    <td>Dr. T.L.</td>
+                    <td>Embargo one-pager to 6–10 journalists + background call slots</td>
+                  </tr>
+                  <tr>
+                    <td class="font-medium whitespace-nowrap">Launch</td>
+                    <td>T=0</td>
+                    <td>Fellows</td>
+                    <td>Publish memo + quote bank + appendix + tailored pitches</td>
+                  </tr>
+                  <tr>
+                    <td class="font-medium whitespace-nowrap">Ignition</td>
+                    <td>T+24 to T+72</td>
+                    <td>Dr. T.L.</td>
+                    <td>Background calls + adversarial "hostile quote" bait</td>
+                  </tr>
+                  <tr>
+                    <td class="font-medium whitespace-nowrap">Rebuttal trap</td>
+                    <td>T+3 to T+10d</td>
+                    <td>Dr. T.L.</td>
+                    <td>Correction memo if attacked; tighten claims; add sourcing</td>
+                  </tr>
+                  <tr>
+                    <td class="font-medium whitespace-nowrap">Conversion</td>
+                    <td>T+7 to T+21d</td>
+                    <td>D.A.</td>
+                    <td>Schedule closed briefings; turn attention into recurring support</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          
+          <div class="grid lg:grid-cols-2 gap-4">
+            <!-- Target Outlets -->
+            <div class="card p-4 sm:p-6">
+              <h4 class="font-display font-semibold text-sm sm:text-base text-slate-100 mb-4 flex items-center gap-2">
+                <i data-lucide="newspaper" class="w-4 h-4 text-sky-400"></i>
+                Target Outlets
+              </h4>
+              <ul class="space-y-2 text-sm text-slate-300 mb-6">
+                <li class="flex items-center gap-2">
+                  <i data-lucide="external-link" class="w-4 h-4 text-slate-400 flex-shrink-0"></i>
+                  <a href="https://www.ft.com/" target="_blank" rel="noopener" class="text-sky-400 hover:underline">Financial Times</a>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="external-link" class="w-4 h-4 text-slate-400 flex-shrink-0"></i>
+                  <a href="https://www.wsj.com/" target="_blank" rel="noopener" class="text-sky-400 hover:underline">Wall Street Journal</a>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="external-link" class="w-4 h-4 text-slate-400 flex-shrink-0"></i>
+                  <a href="https://www.politico.eu/" target="_blank" rel="noopener" class="text-sky-400 hover:underline">POLITICO Europe</a>
+                </li>
+              </ul>
+              
+              <h5 class="font-display font-medium text-sm text-slate-100 mb-3">Seeding Pack (Per Memo)</h5>
+              <ul class="space-y-2 text-slate-300 text-sm">
+                <li class="flex gap-2">
+                  <i data-lucide="file" class="w-4 h-4 text-slate-400 flex-shrink-0 mt-0.5"></i>
+                  <span>Embargo 1-pager (thesis + 3 claims + 1 chart)</span>
+                </li>
+                <li class="flex gap-2">
+                  <i data-lucide="quote" class="w-4 h-4 text-slate-400 flex-shrink-0 mt-0.5"></i>
+                  <span>Quote bank (5 quotes)</span>
+                </li>
+                <li class="flex gap-2">
+                  <i data-lucide="help-circle" class="w-4 h-4 text-slate-400 flex-shrink-0 mt-0.5"></i>
+                  <span>Hostile FAQ</span>
+                </li>
+                <li class="flex gap-2">
+                  <i data-lucide="database" class="w-4 h-4 text-slate-400 flex-shrink-0 mt-0.5"></i>
+                  <span>Data appendix</span>
+                </li>
+              </ul>
+              
+              <div class="callout mt-4">
+                <strong class="text-sky-400">Quality rule:</strong> <span class="text-slate-300">memos must be quotable and extractable in under 30 seconds.</span>
+              </div>
+            </div>
+            
+            <!-- Donor Logic -->
+            <div class="card p-4 sm:p-6">
+              <h4 class="font-display font-semibold text-sm sm:text-base text-slate-100 mb-4 flex items-center gap-2">
+                <i data-lucide="hand-coins" class="w-4 h-4 text-sky-400"></i>
+                What Donors Buy
+              </h4>
+              <ul class="space-y-2 text-sm text-slate-300 mb-4">
+                <li class="flex gap-2">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5"></i>
+                  <span>Agenda leverage at low cost</span>
+                </li>
+                <li class="flex gap-2">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5"></i>
+                  <span>Access to closed briefings (Dr. T.L. default briefer)</span>
+                </li>
+                <li class="flex gap-2">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5"></i>
+                  <span>Clarity: coherent worldview incumbents avoid stating</span>
+                </li>
+                <li class="flex gap-2">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5"></i>
+                  <span>Conflict-as-proof: backlash as validation</span>
+                </li>
+              </ul>
+              
+              <div class="callout-warn">
+                <strong class="text-amber-200">Dr. T.L. does not do fundraising calls.</strong> <span class="text-slate-300">Fundraising uses Dr. T.L.'s artifacts, not Dr. T.L.'s time.</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Deck Logic -->
+          <div class="card p-4 sm:p-6">
+            <h4 class="font-display font-semibold text-sm sm:text-base text-slate-100 mb-4 flex items-center gap-2">
+              <i data-lucide="presentation" class="w-4 h-4 text-sky-400"></i>
+              Donor Deck Logic (10-Slide Narrative)
+            </h4>
+            <div class="overflow-x-auto -mx-4 sm:mx-0 px-4 sm:px-0">
+              <table class="data-table text-xs sm:text-sm">
+                <thead>
+                  <tr>
+                    <th>Slide</th>
+                    <th>Message</th>
+                    <th>Proof</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>1</td><td>Problem: EU dependency is unsustainable</td><td>1 data point + 1 case</td></tr>
+                  <tr><td>2</td><td>Enemy model: EU/UN cannot deliver warfighting outcomes</td><td>Failure modes</td></tr>
+                  <tr><td>3</td><td>Threat triad anchors reality</td><td>Capability shifts</td></tr>
+                  <tr><td>4</td><td>Doctrine</td><td>Single thesis</td></tr>
+                  <tr><td>5</td><td>Products: memos + briefings</td><td>Cadence</td></tr>
+                  <tr><td>6</td><td>Distribution system</td><td>Seeding workflow</td></tr>
+                  <tr><td>7</td><td>Impact signals</td><td>KPIs</td></tr>
+                  <tr><td>8</td><td>Why we win</td><td>Incumbents can't say this</td></tr>
+                  <tr><td>9</td><td>Budget discipline</td><td>$150k → outputs</td></tr>
+                  <tr><td>10</td><td>Ask + renewal</td><td>Tiers</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          
+          <!-- Contribution Tiers -->
+          <div class="card p-4 sm:p-6">
+            <h4 class="font-display font-semibold text-sm sm:text-base text-slate-100 mb-4 flex items-center gap-2">
+              <i data-lucide="layers" class="w-4 h-4 text-sky-400"></i>
+              Contribution Tiers
+            </h4>
+            <div class="overflow-x-auto -mx-4 sm:mx-0 px-4 sm:px-0">
+              <table class="data-table text-xs sm:text-sm">
+                <thead>
+                  <tr>
+                    <th>Tier</th>
+                    <th>Range</th>
+                    <th>What They Get</th>
+                    <th>Why It Converts</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="font-medium text-slate-100 whitespace-nowrap">Builder</td>
+                    <td class="whitespace-nowrap">$10k–$25k</td>
+                    <td>Quarterly briefing + early memo access + donor update memo</td>
+                    <td>Recurring base</td>
+                  </tr>
+                  <tr>
+                    <td class="font-medium text-slate-100 whitespace-nowrap">Operator</td>
+                    <td class="whitespace-nowrap">$25k–$75k</td>
+                    <td>All above + 2 tailored briefings/year (Dr. T.L. leads)</td>
+                    <td>Amplifier conversion</td>
+                  </tr>
+                  <tr>
+                    <td class="font-medium text-slate-100 whitespace-nowrap">Anchor</td>
+                    <td class="whitespace-nowrap">$75k–$150k+</td>
+                    <td>All above + co-host 1 closed session/year</td>
+                    <td>Underwrites budget</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="text-sm text-slate-400 mt-4">
+              <strong>Funding constraint:</strong> accept all Western sources; reject non-Western funding.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Impact Metrics -->
+    <section id="impact" class="mb-4 sm:mb-6">
+      <div class="section-header flex items-center justify-between p-3 sm:p-4 rounded-xl" onclick="toggleSection(this)">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-red-400/10 border border-red-400/30 flex items-center justify-center flex-shrink-0">
+            <i data-lucide="target" class="w-4 h-4 sm:w-5 sm:h-5 text-red-400"></i>
+          </div>
+          <div>
+            <h3 class="font-display font-semibold text-base sm:text-lg text-slate-100">6. Impact Metrics</h3>
+            <p class="text-xs sm:text-sm text-slate-400 hidden sm:block">Power metrics only — KPIs that matter</p>
+          </div>
+        </div>
+        <i data-lucide="chevron-down" class="section-chevron w-5 h-5 text-slate-400 flex-shrink-0"></i>
+      </div>
+      
+      <div class="section-content">
+        <div class="pt-4 space-y-4">
+          <div class="grid lg:grid-cols-2 gap-4">
+            <!-- Tier 1 -->
+            <div class="card p-4 sm:p-6 border-red-400/30">
+              <h4 class="font-display font-semibold text-sm sm:text-base text-slate-100 mb-4 flex items-center gap-2">
+                <i data-lucide="flame" class="w-4 h-4 text-red-400"></i>
+                Tier 1 — Power Signals
+              </h4>
+              <ul class="space-y-3 text-sm text-slate-300">
+                <li class="flex gap-3">
+                  <i data-lucide="swords" class="w-4 h-4 text-red-400 flex-shrink-0 mt-0.5"></i>
+                  <span>Named rebuttals from EU bodies / major NGOs / incumbents</span>
+                </li>
+                <li class="flex gap-3">
+                  <i data-lucide="mail" class="w-4 h-4 text-red-400 flex-shrink-0 mt-0.5"></i>
+                  <span>Inbound invitations to closed security discussions</span>
+                </li>
+                <li class="flex gap-3">
+                  <i data-lucide="landmark" class="w-4 h-4 text-red-400 flex-shrink-0 mt-0.5"></i>
+                  <span>Direct references by sovereign-state policymakers or ministry staff</span>
+                </li>
+              </ul>
+              <div class="flex flex-wrap gap-2 mt-4">
+                <span class="pill pill-danger">Attacks = impact</span>
+                <span class="pill pill-good">Inbound briefings</span>
+              </div>
+            </div>
+            
+            <!-- Tier 2/3 -->
+            <div class="card p-4 sm:p-6">
+              <h4 class="font-display font-semibold text-sm sm:text-base text-slate-100 mb-4 flex items-center gap-2">
+                <i data-lucide="trending-up" class="w-4 h-4 text-emerald-400"></i>
+                Tier 2/3 — Influence + Growth
+              </h4>
+              <ul class="space-y-3 text-sm text-slate-300">
+                <li class="flex gap-3">
+                  <i data-lucide="quote" class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5"></i>
+                  <span>Citations in target outlets</span>
+                </li>
+                <li class="flex gap-3">
+                  <i data-lucide="copy" class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5"></i>
+                  <span>Framework reuse</span>
+                </li>
+                <li class="flex gap-3">
+                  <i data-lucide="dollar-sign" class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5"></i>
+                  <span>Funding growth (renewals, recurring donors)</span>
+                </li>
+                <li class="flex gap-3">
+                  <i data-lucide="users" class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5"></i>
+                  <span>Contributor bench quality (operators & technologists)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-navy-700 mt-8 sm:mt-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <div>
+          <p class="text-sm text-slate-400">
+            <strong class="text-slate-300">Disrupt targets:</strong> GMF • CSIS • RAND Europe
           </p>
-
-          <h3>Foundational Beliefs</h3>
-          <ul>
-            <li><strong>End outsourcing EU security to the US via NATO</strong>: NATO should not be a European welfare mechanism; European states must pay, build, field, and fight.</li>
-            <li><strong>Sovereign state realism</strong>: security outcomes are state-by-state; multilateral bodies are transaction venues, not guardians.</li>
-            <li><strong>Primary threats</strong>: China, Russia, Iran are strategic adversaries; security planning should start with this fact.</li>
-            <li><strong>Business-like defense leadership</strong>: maximize the core mission (deterrence + winning conflict), cut adjacent virtue signaling and institutional bloat.</li>
-            <li><strong>Israel as model</strong>: vitality, sovereignty, and security competence; treat it as a partner and template, not a pariah.</li>
-            <li><strong>Leapfrog via next-gen tech</strong>: bet on AI-enabled command, cyber, space, intelligent systems, and operational analytics and operational analytics and data-centric warfare rather than copying what is already fielded.</li>
-            <li><strong>UN/EU useless for security</strong>: neither reliably protects US or distinct European member-state interests.</li>
-            <li><strong>Free speech posture</strong>: institutional speech codes degrade security thinking; debate must be protected.</li>
-          </ul>
-
-          <div class="callout warn">
-            <strong>Intentional design:</strong> this doctrine is built to provoke legacy EU think tank circuits and NGO networks.
-            Reputational exclusion is accepted, and institutional backlash is treated as an impact signal.
-          </div>
-        </div>
-
-        <div class="card tight">
-          <h3>Positioning (What This Is / Is Not)</h3>
-          <ul>
-            <li><strong>Not</strong> “transatlantic consensus maintenance.”</li>
-            <li><strong>Not</strong> EU funding ecosystem compatible.</li>
-            <li><strong>Not</strong> academic benchmarking for its own sake.</li>
-            <li><strong>Is</strong> agenda warfare aimed at elites with decision leverage (capital, media, intel).</li>
-            <li><strong>Is</strong> an “execution-first” worldview: strategy is useless without procurement, doctrine, organizational, and training reform.</li>
-          </ul>
-
-          <h3>Competitive Frame</h3>
-          <ul>
-            <li>Disrupt: <strong>GMF</strong>, <strong>CSIS</strong>, <strong>RAND Europe</strong>.</li>
-            <li>Method: replace their “institutional caution” with memos that are short, quotable, and empirically defensible.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="audience">
-      <h2>2) Audience & Geography (Designed for Leverage)</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Primary Audiences (Ranked)</h3>
-          <ul>
-            <li><strong>Dual-use tech founders & investors</strong> (AI, cyber, space, autonomy): capital allocation is strategy.</li>
-            <li><strong>Journalists / agenda setters</strong> (security + tech + geopolitics): narrative control shapes policy space.</li>
-            <li><strong>Intelligence community</strong> (current/retired): threat clarity + operational realism.</li>
-          </ul>
-
-          <h3>Why These Audiences Fit a $150k Budget</h3>
-          <ul>
-            <li>You cannot out-staff incumbents; you must <strong>out-target</strong> them.</li>
-            <li>Capital + media + intel = <strong>disproportionate influence per dollar</strong>.</li>
-            <li>These audiences reward short, sharp, non-bureaucratic products.</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Geographic Focus (Europe 70% / US 30%)</h3>
-          <p>
-            The objective is to pull debate away from Brussels abstractions and toward sovereign national defense decisions.
-          </p>
-          <ul>
-            <li><strong>Germany</strong>: industrial base + political gravity; also high denial/avoidance to puncture.</li>
-            <li><strong>Poland</strong>: threat-realistic, high defense spend trajectory, strong sovereignty instincts.</li>
-            <li><strong>Italy</strong>: Mediterranean security and industrial capacity; often under-optimized strategically.</li>
-            <li><strong>Hungary</strong>: sovereignty posture; lightning rod for EU institutional conflict.</li>
-            <li><strong>Denmark / Sweden</strong>: Nordic security seriousness; tech capability and proximity to Russia.</li>
-            <li><strong>Switzerland</strong>: finance + security-adjacent neutrality debates; useful for high-level convening.</li>
-          </ul>
-          <div class="pillrow">
-            <span class="pill accent">30/70 US/EU focus</span>
-            <span class="pill warn">Brussels deprioritized</span>
-            <span class="pill good">State-by-state leverage</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="model">
-      <h2>3) Operating Model (Lean, Virtual, High Output)</h2>
-
-      <div class="grid">
-        <div class="card">
-          <h3>Organizational Structure</h3>
-          <ul>
-            <li><strong>Entity:</strong> US-based (recommend: either 501(c)(3) for research/education, or a paired structure with 501(c)(4) if advocacy becomes central).</li>
-            <li><strong>Governance:</strong> small board/advisory group (3–6) with operational credibility (defense, intel, venture, founders).</li>
-            <li><strong>You:</strong> Chair / founder-public face; <strong>staff authors</strong> research and publish.</li>
-            <li><strong>Virtual-only:</strong> avoid office costs; spend on outputs and distribution.</li>
-          </ul>
-
-          <h3>Staffing (Smallish by Design)</h3>
-          <ul>
-            <li><strong>Managing Editor / Ops</strong> (part-time): schedules, editorial, distribution tracking.</li>
-            <li><strong>Analyst pool</strong> (1–2 paid contributors): short memos + briefings.</li>
-            <li><strong>Specialist bench</strong> (as needed): cyber/AI/space procurement experts paid per deliverable.</li>
-          </ul>
-
-          <div class="callout">
-            The unit of production is the <strong>memo</strong>. Everything else (briefings, op-eds, donor updates) is derived from memo content.
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>Budget Allocation (Target: $150k/year)</h3>
-          <table class="table">
-            <thead><tr><th>Line</th><th>Annual Target</th><th>Notes</th></tr></thead>
-            <tbody>
-              <tr><td>Contributor honoraria</td><td>$35k–$80k</td><td>Pay per memo + briefing; keep fixed costs low.</td></tr>
-              <tr><td>Editorial + comms</td><td>$25k–$35k</td><td>Managing editor, newsletter ops, contact list hygiene.</td></tr>
-              <tr><td>Legal compliance</td><td>$10k–$15k</td><td>Entity setup, donor compliance, basic risk reviews.</td></tr>
-              <tr><td>Web + design + promotion</td><td>$5k–$10k</td><td>Light site, mailing platform, analytics, CRM-lite.</td></tr>
-              <tr><td>Travel + convening</td><td>$30k–$45k</td><td>Selective, high-leverage meetings only.</td></tr>
-              <tr><td>Contingency</td><td>$5k–$15k</td><td>Response to attacks, rapid research, crisis outputs.</td></tr>
-            </tbody>
-          </table>
-          <p class="small">
-            The constraint forces discipline: you cannot “research everything.” You must pick a few fights and win them repeatedly.
+          <p class="text-sm text-slate-400 mt-1">
+            <strong class="text-slate-300">Products:</strong> memos + closed briefings
           </p>
         </div>
-      </div>
-    </section>
-
-    <section id="content">
-      <h2>4) Content Doctrine: Anchor in Current Affairs</h2>
-
-      <div class="grid">
-        <div class="card">
-          <h3>Public Output (80%)</h3>
-          <ul>
-            <li><strong>Strategic memos (2–4 pages)</strong>: the flagship product.</li>
-            <li><strong>Media extracts</strong>: one “quotable paragraph” + “hard claim with evidence” per memo.</li>
-            <li><strong>Short rebuttals</strong>: when attacked, respond fast with a 1–2 page “correction memo.”</li>
-          </ul>
-
-          <h3>Memo Design Rules (So They Spread)</h3>
-          <ul>
-            <li><strong>1-page executive summary</strong> (copy-pasteable into journalist notes).</li>
-            <li><strong>3 claims maximum</strong> (each falsifiable).</li>
-            <li><strong>2–5 concrete policy actions</strong> (specific to named states).</li>
-            <li><strong>One chart or table</strong> where possible; no academic bloat.</li>
-            <li><strong>One “institutional heresy” line</strong> (forces rebuttal).</li>
-          </ul>
-          <div class="pillrow">
-            <span class="pill accent">2 memos/month</span>
-            <span class="pill good">Quotable</span>
-            <span class="pill warn">Heresy included</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>Closed Output (20%)</h3>
-          <ul>
-            <li><strong>Closed-door briefings</strong>: 90 minutes, memo-led, no slide decks.</li>
-            <li><strong>Investor/intel “threat briefs”</strong>: tailored 2-page addendum for select recipients.</li>
-            <li><strong>Rapid-response calls</strong>: 20-minute off-record consults (high-value donors only).</li>
-          </ul>
-
-          <h3>Briefing Design Rules</h3>
-          <ul>
-            <li>Start with a claim that challenges existing assumptions.</li>
-            <li>Spend 60% on “what to do next” rather than “what is happening.”</li>
-            <li>Close with a short “risk register”: what happens if states do nothing.</li>
-          </ul>
-
-          <div class="callout warn">
-            Closed briefings are not “events.” They are <strong>conversion moments</strong> (donors, amplifiers, operators).
-          </div>
+        <div class="text-xs sm:text-sm text-slate-400">
+          Internal document • Built for high-friction agenda setting and sovereign-state defense realism
         </div>
       </div>
+    </div>
+  </footer>
 
-      <div class="card" style="margin-top:14px">
-        <h3>Core Topic Pillars (Repeat to Win)</h3>
-        <div class="cols">
-          <div class="tight">
-            <strong>1) NATO Dependency & EU Defense Illusions</strong>
-            <ul>
-              <li>Why NATO is misused as a substitute for sovereign defense</li>
-              <li>EU as a coordination failure machine</li>
-              <li>State-by-state defense spending & readiness truth</li>
-            </ul>
-          </div>
-          <div class="tight">
-            <strong>2) Tech-First Power</strong>
-            <ul>
-              <li>AI-enabled command and targeting</li>
-              <li>Autonomy, drones, counter-drone stacks</li>
-              <li>Cyber offense/defense and industrial resilience</li>
-              <li>Sitauational awareness for decision advantage</li>
-            </ul>
-          </div>
-          <div class="tight">
-            <strong>3) Israel Model & Free Speech</strong>
-            <ul>
-              <li>Operational doctrine and mobilization culture</li>
-              <li>National resilience, deterrence credibility</li>
-              <li>Free speech as prerequisite for strategic clarity</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="plan">
-      <h2>5) 24-Month Content & Impact Plan (Cadence + Campaigns)</h2>
-
-      <div class="card">
-        <h3>Year 1: Shock & Positioning</h3>
-        <p><strong>Objective:</strong> become quotable, force rebuttals, and establish a clear intellectual “enemy set.”</p>
-
-        <table class="table">
-          <thead>
-            <tr>
-              <th>Quarter</th>
-              <th>Theme</th>
-              <th>Outputs</th>
-              <th>Impact Goal</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Q1</strong></td>
-              <td>NATO dependency, EU failure modes</td>
-              <td>6 memos; 2 briefings; 1 media campaign</td>
-              <td>First media citations; early backlash in policy circles</td>
-            </tr>
-            <tr>
-              <td><strong>Q2</strong></td>
-              <td>China/Russia/Iran threat clarity; “strategic triad”</td>
-              <td>6 memos; 2 briefings; 1 closed investor threat brief</td>
-              <td>Journalists treat you as a “go-to contrarian” source</td>
-            </tr>
-            <tr>
-              <td><strong>Q3</strong></td>
-              <td>Israel model and European sovereignty lessons</td>
-              <td>6 memos; 2 briefings; 1 rebuttal pack</td>
-              <td>Institutional attacks; NGO responses; “unacceptable but unavoidable” status</td>
-            </tr>
-            <tr>
-              <td><strong>Q4</strong></td>
-              <td>Next-gen tech as power: autonomy, AI, cyber, space</td>
-              <td>6 memos; 2 briefings; 1 year-end flagship essay</td>
-              <td>Inbound from investors + operators; funding conversations upgrade</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <div class="callout danger">
-          <strong>Design principle:</strong> Year 1 is not for consensus-building. It is for <strong>position-locking</strong> and forcing
-          incumbents to either ignore you (failure) or attack you (success).
-        </div>
-      </div>
-
-      <div class="card" style="margin-top:14px">
-        <h3>Year 2: Consolidation & Brokerage</h3>
-        <p><strong>Objective:</strong> convert controversy into recurring funding, closed briefings demand, and agenda durability.</p>
-
-        <table class="table">
-          <thead>
-            <tr>
-              <th>Quarter</th>
-              <th>Theme</th>
-              <th>Outputs</th>
-              <th>Impact Goal</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Q5</strong></td>
-              <td>Procurement reform & industrial realism</td>
-              <td>6–7 memos; 3 briefings; investor procurement roundtable</td>
-              <td>Briefings requested by third parties (not you pitching)</td>
-            </tr>
-            <tr>
-              <td><strong>Q6</strong></td>
-              <td>State-by-state defense “scorecards” (lightweight)</td>
-              <td>6–7 memos; 3 briefings; publish scorecard framework</td>
-              <td>Ministry staff reference your scorecard categories</td>
-            </tr>
-            <tr>
-              <td><strong>Q7</strong></td>
-              <td>Tech leapfrog doctrine: what to buy vs build vs ally</td>
-              <td>6–7 memos; 3 briefings; flagship tech report</td>
-              <td>VC funds cite your framework; startups use it in fundraising</td>
-            </tr>
-            <tr>
-              <td><strong>Q8</strong></td>
-              <td>Strategic forecast + “red team” rebuttals</td>
-              <td>6–7 memos; 3 briefings; annual forecast & predictions</td>
-              <td>Funding growth; institutional backlash becomes predictable and usable</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <div class="callout">
-          Year 2 should feel less like “provocation” and more like <strong>structured doctrine</strong>: frameworks others can reuse.
-        </div>
-      </div>
-    </section>
-
-    <section id="media">
-      <h2>6) Media Seeding Strategy (How Memos Become Influence)</h2>
-
-      <div class="grid">
-        <div class="card">
-          <h3>Media Seeding Goals (Measurable)</h3>
-          <ul>
-            <li><strong>Agenda infection:</strong> force your language into others’ framing (even hostile writers).</li>
-            <li><strong>Quote capture:</strong> become the default contrarian voice on EU defense dependency and tech leapfrogging.</li>
-            <li><strong>Rebuttal trigger:</strong> get institutions to publish rebuttals or “fact checks.”</li>
-            <li><strong>Donor validation:</strong> show donors a visible “pressure gradient” (citations + backlash + inbound).</li>
-          </ul>
-
-          <h3>Core Distribution Channels</h3>
-          <ul>
-            <li><strong>Direct journalist outreach anchored in current headlines</strong> (primary): curated list, tailored hooks.</li>
-            <li><strong>Newsletter</strong> (secondary): archive, credibility, and donor updates.</li>
-            <li><strong>X</strong> (supporting): not for likes; for “elite visibility” and controversy ignition.</li>
-            <li><strong>Closed WhatsApp/Signal groups</strong> (targeted): investor + operator micro-networks.</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Outlet Priorities (Examples)</h3>
-          <ul>
-            <li>Financial Times: <a href="https://www.ft.com/" target="_blank" rel="noopener">https://www.ft.com/</a></li>
-            <li>Wall Street Journal: <a href="https://www.wsj.com/" target="_blank" rel="noopener">https://www.wsj.com/</a></li>
-            <li>The Economist: <a href="https://www.economist.com/" target="_blank" rel="noopener">https://www.economist.com/</a></li>
-            <li>Politico Europe: <a href="https://www.politico.eu/" target="_blank" rel="noopener">https://www.politico.eu/</a></li>
-            <li>Selected German/European mainstream (as targets, not comfort zones):
-              <span class="small">(e.g., Bild is useful for controversy amplification)</span>
-            </li>
-            <li>Think-tank ecosystem as adversarial amplifiers (GMF/CSIS/RAND Europe coverage is valuable).</li>
-          </ul>
-          <div class="callout warn">
-            Priority is not “publish op-eds.” Priority is “get cited,” including by people who disagree.
-          </div>
-        </div>
-      </div>
-
-      <div class="card" style="margin-top:14px">
-        <h3>Media Seeding Workflow (Repeatable System)</h3>
-        <table class="table">
-          <thead>
-            <tr>
-              <th>Phase</th>
-              <th>Timing</th>
-              <th>What You Do</th>
-              <th>Output Artifact</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Pre-brief</strong></td>
-              <td>T-72 to T-24 hours</td>
-              <td>Send embargoed one-pager to 6–10 journalists: thesis, 3 claims, 1 chart, “why now.”</td>
-              <td class="mono">Embargo 1-pager</td>
-            </tr>
-            <tr>
-              <td><strong>Launch</strong></td>
-              <td>T=0</td>
-              <td>Publish memo + post 2–3 X snippets + email list; seed 3 tailored pitches to top targets.</td>
-              <td class="mono">Memo + 3 pitch emails</td>
-            </tr>
-            <tr>
-              <td><strong>Ignition</strong></td>
-              <td>T+24 to T+72</td>
-              <td>Offer 15-minute background calls; push a “rebuttal bait” quote to hostile outlets.</td>
-              <td class="mono">Background call notes</td>
-            </tr>
-            <tr>
-              <td><strong>Rebuttal trap</strong></td>
-              <td>T+3 to T+10 days</td>
-              <td>If attacked, publish a short “Correction Memo” with tighter citations, minimal emotion.</td>
-              <td class="mono">1–2 page rebuttal</td>
-            </tr>
-            <tr>
-              <td><strong>Conversion</strong></td>
-              <td>T+7 to T+21 days</td>
-              <td>Use the attention spike to schedule 1–2 closed briefings with donors/investors/operators.</td>
-              <td class="mono">Briefing invite + memo</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="grid" style="margin-top:14px">
-        <div class="card">
-          <h3>Pitch Angles That Work (By Audience)</h3>
-          <h3 style="margin-top:10px">For Security Journalists</h3>
-          <ul>
-            <li><strong>Contrarian data</strong>: “EU defense spending doesn’t translate into readiness.”</li>
-            <li><strong>Institutional hypocrisy</strong>: “EU condemns reality while relying on US protection.”</li>
-            <li><strong>Named-country stakes</strong>: Germany/Poland/Italy procurement choices, not “Europe.”</li>
-          </ul>
-
-          <h3>For Tech/VC Press</h3>
-          <ul>
-            <li><strong>Tech as power</strong>: “The next war is a software war with hardware consequences.”</li>
-            <li><strong>Procurement bottlenecks</strong>: why Europe can’t field quickly; how startups exploit the gap.</li>
-            <li><strong>Israel model</strong>: integration as problem solving culture.</li>
-          </ul>
-
-          <h3>For General Agenda-Setters</h3>
-          <ul>
-            <li><strong>Speech & security</strong>: censorship norms as a strategic liability.</li>
-            <li><strong>UN/EU irrelevance</strong>: show concrete failures, not ideology.</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Media “Package” Per Memo (So It Gets Used)</h3>
-          <ul>
-            <li><strong>Memo PDF</strong> (2–4 pages)</li>
-            <li><strong>One-page embargo brief</strong> (executive summary + 3 claims)</li>
-            <li><strong>Quote bank</strong> (5 quotes, each 1–2 sentences)</li>
-            <li><strong>Data appendix</strong> (sources list + 1–2 charts)</li>
-            <li><strong>Hostile FAQ</strong> (answers to predictable attacks: “pro-war,” “anti-EU,” “illiberal,” “pro-Israel,” “pro-Palantir”)</li>
-          </ul>
-
-          <div class="callout">
-            If a journalist cannot extract a quote in 30 seconds, you lose distribution.
-          </div>
-
-          <h3>Minimum Analytics</h3>
-          <ul>
-            <li>Inbound media requests/week</li>
-            <li>Mentions/citations in target outlets</li>
-            <li>Named institutional rebuttals (EU bodies, NGOs)</li>
-            <li>Briefings scheduled from memo spikes</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="card" style="margin-top:14px">
-        <h3>Sample Journalist Pitch Email (Template)</h3>
-        <p class="small">Use as a pattern; keep it short; tailor the “why now” line to current events.</p>
-        <div class="callout">
-          <div class="mono">
-            Subject: Embargoed: Why EU defense spending isn’t buying readiness (Germany/Poland comparison)<br><br>
-            Hi [Name],<br><br>
-            I’m sharing an embargoed 1-pager from our new memo: “NATO as Strategic Welfare: Why Europe Outsources Failure.”<br><br>
-            Core claim: EU defense spend is not translating into deployable capability; the gap is structural (procurement + doctrine + political incentives).<br><br>
-            Why now: [Insert current trigger—e.g., new budget announcement, Ukraine/Russia escalation, NATO summit outcome].<br><br>
-            If useful, I can do a 10–15 min background call today/tomorrow. Embargo lifts: [date/time].<br><br>
-            Best,<br>
-            [Name] / [Title]<br>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="donors">
-      <h2>7) Donor Pitch Deck Logic (No Slides Required)</h2>
-
-      <div class="two">
-        <div class="card">
-          <h3>Who You’re Selling To (Given “All Western Sources” Constraint)</h3>
-          <ul>
-            <li><strong>US-based family offices</strong> with defense/tech interest</li>
-            <li><strong>VC funds</strong> focused on dual-use</li>
-            <li><strong>Tech founders</strong> seeking strategic legitimacy and signal amplification</li>
-            <li><strong>Western-aligned donors</strong> who want a “counter-consensus” institution</li>
-          </ul>
-
-          <h3>What Donors Actually Buy</h3>
-          <ul>
-            <li><strong>Leverage</strong>: ability to shift elite debate at low marginal cost.</li>
-            <li><strong>Access</strong>: closed briefings and curated networks (operators, journalists, investors).</li>
-            <li><strong>Clarity</strong>: a coherent worldview that incumbents refuse to state plainly.</li>
-            <li><strong>Conflict</strong>: donors funding this want visible institutional resistance.</li>
-          </ul>
-
-          <div class="callout warn">
-            You are not selling “research.” You are selling <strong>agenda control</strong>.
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>Deck Structure (10 Slides Worth of Logic)</h3>
-          <table class="table">
-            <thead><tr><th>Slide</th><th>Message</th><th>Proof / Hook</th></tr></thead>
-            <tbody>
-              <tr><td>1</td><td><strong>Problem</strong>: EU security is outsourced; deterrence credibility erodes</td><td>Concrete example + short data point</td></tr>
-              <tr><td>2</td><td><strong>Enemy model</strong>: EU/UN bureaucracy cannot produce warfighting outcomes</td><td>Failure case studies</td></tr>
-              <tr><td>3</td><td><strong>Threat triad</strong>: China/Russia/Iran drive the strategic environment</td><td>Recent events & capability shifts</td></tr>
-              <tr><td>4</td><td><strong>Our doctrine</strong>: sovereignty + tech leapfrog + Israel model</td><td>One crisp thesis</td></tr>
-              <tr><td>5</td><td><strong>What we do</strong>: 2 memos/month + closed briefings</td><td>Operational cadence, not aspiration</td></tr>
-              <tr><td>6</td><td><strong>Distribution</strong>: targeted journalist + VC + intel networks</td><td>Seeding workflow</td></tr>
-              <tr><td>7</td><td><strong>Impact signals</strong>: citations + attacks + invitations</td><td>KPIs designed for power, not vanity</td></tr>
-              <tr><td>8</td><td><strong>Why we win</strong>: incumbents can’t say this; we can</td><td>Institutional constraint advantage</td></tr>
-              <tr><td>9</td><td><strong>Budget</strong>: $150k = outputs; low overhead</td><td>Line item allocation</td></tr>
-              <tr><td>10</td><td><strong>Ask</strong>: fund 12 months; join closed briefings</td><td>Clear contribution tiers</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <div class="card" style="margin-top:14px">
-        <h3>The Donor Narrative (Use This Verbally)</h3>
-        <p>
-          “Legacy institutions are built to avoid controversy, which means they avoid truth. Europe’s defense posture is structurally dependent,
-          bureaucratically constrained, and strategically unserious. The adversaries aren’t. Our model is to produce short, weaponized memos that
-          force elite debate, redirect capital and attention toward next-gen defense capability, and normalize sovereign realism over multilateral theater.
-          If EU bodies and NGOs attack us, that is a measurable signal that we are landing punches.”
-        </p>
-
-        <h3>Contribution Tiers (Simple, Business-Like)</h3>
-        <table class="table">
-          <thead><tr><th>Tier</th><th>Range</th><th>What They Get (Legally & Practically)</th><th>Why It Works</th></tr></thead>
-          <tbody>
-            <tr>
-              <td><strong>Builder</strong></td>
-              <td>$10k–$25k</td>
-              <td>Quarterly closed briefing; early memo access; donor update memo</td>
-              <td>Low friction, gets you recurring base</td>
-            </tr>
-            <tr>
-              <td><strong>Operator</strong></td>
-              <td>$25k–$75k</td>
-              <td>All above + 2 tailored closed briefings/year + priority background calls</td>
-              <td>Converts donors into amplifiers and connectors</td>
-            </tr>
-            <tr>
-              <td><strong>Anchor</strong></td>
-              <td>$75k–$150k+</td>
-              <td>All above + co-host one closed investor/operator session + rapid-response consult access</td>
-              <td>Funds most of the annual budget; high leverage</td>
-            </tr>
-          </tbody>
-        </table>
-        <p class="small">
-          Exact benefits must stay within the legal boundaries of the chosen US entity structure; design access as briefings and early insights rather than “services.”
-        </p>
-      </div>
-
-      <div class="grid" style="margin-top:14px">
-        <div class="card">
-          <h3>Donor Objections (Predictable) and Answers</h3>
-          <ul>
-            <li><strong>“This will be controversial.”</strong> Good. Controversy is a proxy for relevance when the target is institutional complacency.</li>
-            <li><strong>“Will you be blocked by EU circles?”</strong> Yes. That is accepted; we target sovereign states and elite networks, not Brussels salons.</li>
-            <li><strong>“Can you prove impact?”</strong> Yes: citations, attacks, inbound briefing requests, and donor network growth.</li>
-            <li><strong>“Isn’t this too pro-Israel?”</strong> Israel is used as a competence model; the point is operational lessons, not sentiment.</li>
-            <li><strong>“Won’t NGOs smear this?”</strong> Likely. We treat that as part of the impact cycle, then respond with evidence-heavy correction memos.</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Donor Conversion Funnel (Practical)</h3>
-          <table class="table">
-            <thead><tr><th>Stage</th><th>Trigger</th><th>What You Do</th></tr></thead>
-            <tbody>
-              <tr><td>1) Awareness</td><td>Memo hits media</td><td>Send 1-pager + invite to next closed briefing</td></tr>
-              <tr><td>2) Validation</td><td>Institutional backlash</td><td>Forward rebuttal + correction memo; show you can take heat</td></tr>
-              <tr><td>3) Engagement</td><td>Briefing attendance</td><td>Offer tailored follow-up call; ask for targeted intro list</td></tr>
-              <tr><td>4) Commitment</td><td>Aligned interest</td><td>Offer tiered contribution; make it annual and renewable</td></tr>
-              <tr><td>5) Amplification</td><td>Donor on board</td><td>Give donor a “share pack” and invite to co-host closed session</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <div class="card" style="margin-top:14px">
-        <h3>Donor One-Pager (Template Content)</h3>
-        <div class="callout">
-          <div class="mono">
-            Title: [Think Tank Name] — Sovereign Defense Realism & Tech-First Power<br><br>
-            Mission: Shift elite discourse away from multilateral illusions toward sovereign defense responsibility and next-gen deterrence.<br><br>
-            What we produce: 2 strategic memos/month (2–4 pages) + closed briefings for investors/operators/intel.<br><br>
-            Why now: Europe is structurally dependent; adversaries are accelerating; tech leapfrogging beats legacy replication.<br><br>
-            Success signals: top-tier media citations, EU/NGO rebuttals, inbound briefing requests, funding growth.<br><br>
-            Funding ask: $[X] to underwrite 12 months of memos + briefings; recurring annual support preferred.<br>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="kpis">
-      <h2>8) KPIs (Power Metrics Only)</h2>
-
-      <div class="grid">
-        <div class="card">
-          <h3>Tier 1: Power Signals (Primary)</h3>
-          <ul>
-            <li><strong>Named institutional rebuttals</strong> (EU bodies, major NGOs, incumbent think tanks).</li>
-            <li><strong>Invitations</strong> to closed security discussions (operator/intel/investor networks).</li>
-            <li><strong>Direct references</strong> by sovereign-state policymakers or ministry staff (even critical).</li>
-          </ul>
-
-          <h3>Targets (Illustrative)</h3>
-          <ul>
-            <li>Year 1: 6–12 meaningful citations; 2–6 institutional attacks; 6–8 closed briefings.</li>
-            <li>Year 2: 15–30 citations; 6–12 institutional attacks; 10–12 closed briefings.</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Tier 2: Influence Indicators (Secondary)</h3>
-          <ul>
-            <li>Mentions in target outlets (FT/WSJ/Economist/Politico EU).</li>
-            <li>Pick-up by high-leverage newsletters / podcasts (selective).</li>
-            <li>Framework reuse: your categories used in others’ writing (“NATO welfare,” “tech leapfrog,” “EU theater”).</li>
-          </ul>
-
-          <h3>Tier 3: Growth & Survival (Necessary)</h3>
-          <ul>
-            <li><strong>Funding growth</strong>: recurring donors; diversified sources (Western-only constraint).</li>
-            <li><strong>Contributor bench quality</strong>: operators > academics.</li>
-            <li><strong>Distribution asset</strong>: a curated journalist list + donor list with high open/reply rates.</li>
-          </ul>
-
-          <div class="callout warn">
-            Ignore social-media vanity metrics. Use X as a visibility ignition tool, not as a KPI.
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="appendix">
-      <h2>9) Appendices (Operational Templates)</h2>
-
-      <div class="card">
-        <h3>A) Memo Template (2–4 Pages)</h3>
-        <ol>
-          <li><strong>Title</strong> (designed for conflict): e.g., “NATO as Strategic Welfare”</li>
-          <li><strong>Executive Summary</strong> (1 page): 3 claims + 5 bullet actions</li>
-          <li><strong>Claim 1</strong> (evidence, 2–3 paragraphs)</li>
-          <li><strong>Claim 2</strong> (evidence, 2–3 paragraphs)</li>
-          <li><strong>Claim 3</strong> (evidence, 2–3 paragraphs)</li>
-          <li><strong>Actions</strong> (state-by-state: Germany/Poland/Italy etc.)</li>
-          <li><strong>Hostile FAQ</strong> (5 short Q/A)</li>
-          <li><strong>Sources</strong> (tight, reputable)</li>
-        </ol>
-        <p class="small">
-          Preferred evidence sources: official defense documents, credible major press, government releases, reputable institutes.
-          Avoid low-credibility or advocacy-only citations.
-        </p>
-      </div>
-
-      <div class="grid" style="margin-top:14px">
-        <div class="card">
-          <h3>B) Closed Briefing Run-of-Show (90 Minutes)</h3>
-          <ul>
-            <li>0–10: “The heresy” (one claim that forces attention)</li>
-            <li>10–35: Evidence + real constraints (procurement, doctrine, politics)</li>
-            <li>35–60: What to do (actions by actor type: state, investor, operator)</li>
-            <li>60–80: Q&A (keep it tactical)</li>
-            <li>80–90: Next steps + conversion (donor/support ask or follow-up session)</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>C) Attack Response Protocol (So Attacks Help You)</h3>
-          <ul>
-            <li><strong>Do not</strong> argue emotionally on X.</li>
-            <li><strong>Do</strong> publish a “Correction Memo” with tighter sourcing and clearer claims.</li>
-            <li><strong>Do</strong> send donors a private “Attack Brief” explaining who attacked and why it matters.</li>
-            <li><strong>Do</strong> offer journalists background: “Here are the facts they avoided.”</li>
-          </ul>
-          <div class="callout danger">
-            Attacks are not PR crises. They are distribution events.
-          </div>
-        </div>
-      </div>
-
-      <div class="card" style="margin-top:14px">
-        <h3>D) Initial Memo Pipeline (First 12 Titles)</h3>
-        <div class="cols">
-          <div class="tight">
-            <strong>NATO / EU</strong>
-            <ul>
-              <li>NATO as Welfare: The Outsourcing Trap</li>
-              <li>Germany’s Defense Paradox: Money Without Readiness</li>
-              <li>Why Brussels Defense “Autonomy” Is Theater</li>
-            </ul>
-          </div>
-          <div class="tight">
-            <strong>Threat Triad</strong>
-            <ul>
-              <li>China’s Military Tech Model vs Europe’s</li>
-              <li>Russia’s Adaptation Cycle: What Europe Misses</li>
-              <li>How Israel defeated Iran’s Networked Warfare: Lessons for Europe</li>
-              <li>Deterrence Requires Credibility, Not Declarations</li>
-            </ul>
-          </div>
-          <div class="tight">
-            <strong>Tech & Israel</strong>
-            <ul>
-              <li>Israel’s Defense Model: Mobilization + Tech Integration</li>
-              <li>Palantir and the Data-Centric Battlefield</li>
-              <li>Autonomy Now: Drones, Counter-Drones, and Fielding Speed</li>
-              <li>Free Speech as a National Security Capability</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="card" style="margin-top:14px">
-        <h3>E) Minimal Tooling Stack (Cheap, Sufficient)</h3>
-        <ul>
-          <li>Website + archive (static): simple, fast, searchable</li>
-          <li>Mailing list: segmentation (journalists / donors / operators / general)</li>
-          <li>CRM-lite: track introductions, briefings, renewals</li>
-          <li>Analytics: basic (memo views, referral sources, conversions to briefings)</li>
-        </ul>
-        <p class="small">
-          The only “tech product” worth building at this budget is a clean archive and contact discipline.
-        </p>
-      </div>
-    </section>
-
-    <footer>
-      <div><strong>Operating constraints</strong>: US-based, fully virtual, high controversy tolerance, Western funding only, public output ~80%, memos + closed briefings as primary products.</div>
-      <div class="hr"></div>
-      <div>
-        Distribution anchors (examples): 
-        <a href="https://www.ft.com/" target="_blank" rel="noopener">https://www.ft.com/</a> ·
-        <a href="https://www.wsj.com/" target="_blank" rel="noopener">https://www.wsj.com/</a> ·
-        <a href="https://www.economist.com/" target="_blank" rel="noopener">https://www.economist.com/</a> ·
-        <a href="https://www.politico.eu/" target="_blank" rel="noopener">https://www.politico.eu/</a> ·
-      </div>
-    </footer>
-  </div>
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+    
+    // Toggle section expand/collapse
+    function toggleSection(header) {
+      const content = header.nextElementSibling;
+      const isOpen = header.classList.contains('open');
+      
+      if (isOpen) {
+        header.classList.remove('open');
+        content.classList.remove('open');
+      } else {
+        header.classList.add('open');
+        content.classList.add('open');
+      }
+    }
+    
+    // Toggle mobile menu
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      const overlay = document.getElementById('menuOverlay');
+      
+      menu.classList.toggle('open');
+      overlay.classList.toggle('hidden');
+      document.body.classList.toggle('overflow-hidden');
+    }
+    
+    // Close mobile menu on escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        const menu = document.getElementById('mobileMenu');
+        const overlay = document.getElementById('menuOverlay');
+        
+        if (menu.classList.contains('open')) {
+          menu.classList.remove('open');
+          overlay.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }
+      }
+    });
+    
+    // Smooth scroll for anchor links with header offset
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          const headerOffset = 80;
+          const elementPosition = target.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+    
+    // Handle touch events for mobile menu
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    document.addEventListener('touchstart', function(e) {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+    
+    document.addEventListener('touchend', function(e) {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    }, { passive: true });
+    
+    function handleSwipe() {
+      const menu = document.getElementById('mobileMenu');
+      const swipeThreshold = 100;
+      
+      // Swipe left to close menu
+      if (touchStartX - touchEndX > swipeThreshold && menu.classList.contains('open')) {
+        toggleMobileMenu();
+      }
+      
+      // Swipe right from edge to open menu
+      if (touchEndX - touchStartX > swipeThreshold && touchStartX < 30 && !menu.classList.contains('open')) {
+        toggleMobileMenu();
+      }
+    }
+  </script>
 </body>
 </html>
-```
