@@ -1,4 +1,11 @@
 name: Deploy to GitHub Pages
+
+# Ensure the workflow has permission to create/update Pages
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 on:
   push:
     branches:
@@ -13,9 +20,23 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Deploy to gh-pages
-        uses: peaceiris/actions-gh-pages@v3
+      # If you have a build step (npm, hugo, etc), run it here and emit output into ./docs
+      # - name: Build
+      #   run: |
+      #     npm ci
+      #     npm run build
+      #     # ensure output is in ./docs
+
+      # Create/ensure the Pages site is configured for this repo
+      - name: Configure Pages
+        uses: actions/configure-pages@v2
+
+      # Upload the ./docs directory as the artifact to be deployed
+      - name: Upload artifact for Pages
+        uses: actions/upload-pages-artifact@v1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
-          publish_dir: ./docs
+          path: ./docs
+
+      # Deploy the uploaded artifact to GitHub Pages
+      - name: Deploy to Pages
+        uses: actions/deploy-pages@v1
