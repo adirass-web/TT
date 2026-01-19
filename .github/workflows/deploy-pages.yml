@@ -1,6 +1,5 @@
 name: Deploy to GitHub Pages
 
-# Ensure the workflow has permission to create/update Pages
 permissions:
   contents: write
   pages: write
@@ -20,23 +19,16 @@ jobs:
         with:
           fetch-depth: 0
 
-      # If you have a build step (npm, hugo, etc), run it here and emit output into ./docs
-      # - name: Build
-      #   run: |
-      #     npm ci
-      #     npm run build
-      #     # ensure output is in ./docs
-
-      # Create/ensure the Pages site is configured for this repo
+      # Ensure the Pages site exists and is configured for GitHub Actions deployment
       - name: Configure Pages
         uses: actions/configure-pages@v2
 
-      # Upload the ./docs directory as the artifact to be deployed
+      # Upload the ./docs directory as the artifact for Pages (this is the Pages-specific uploader)
       - name: Upload artifact for Pages
         uses: actions/upload-pages-artifact@v1
         with:
           path: ./docs
 
-      # Deploy the uploaded artifact to GitHub Pages
+      # Deploy the uploaded artifact to Pages
       - name: Deploy to Pages
         uses: actions/deploy-pages@v1
