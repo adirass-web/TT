@@ -19,16 +19,13 @@ jobs:
         with:
           fetch-depth: 0
 
-      # Ensure the Pages site exists and is configured for GitHub Actions deployment
       - name: Configure Pages
         uses: actions/configure-pages@v2
 
-      # Upload the ./docs directory as the artifact for Pages (this is the Pages-specific uploader)
       - name: Upload artifact for Pages
         uses: actions/upload-pages-artifact@v1
         with:
           path: ./docs
 
-      # Deploy the uploaded artifact to Pages
       - name: Deploy to Pages
         uses: actions/deploy-pages@v1
